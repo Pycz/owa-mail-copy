@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Owa mail copy
-// @version     0.0.1
+// @version     0.0.2
 // @description Add button for easy copy of e-mail address in OWA
 // @author      Ruslan Borovilov
 // @namespace   https://github.com/Pycz/
@@ -32,22 +32,14 @@
                 copy_button.style.paddingLeft = '2px';
                 copy_button.style.paddingRight = '1px';
                 copy_button.onclick = (e) => {
-                    navigator.permissions.query({name: "clipboard-write"}).then(result => {
-                        if (result.state == "granted" || result.state == "prompt") {
-                            navigator.clipboard.writeText(to_copy).then(() => {
-                                console.log(`Copy '${to_copy}' is succsseed!`);
-                            }, () => {
-                                console.log('Copy error!');
-                            });
-                        }
-                        else {
-                            console.log('No permissions!');
-                        }
+                    navigator.clipboard.writeText(to_copy).then(() => {
+                        console.log(`Copy '${to_copy}' is succsseed!`);
+                    }, () => {
+                        console.log('Copy error!');
                     });
                 };
 
                 email_adress.appendChild(copy_button);
-
             }, 500)
         }
     }, 1000)
