@@ -1,0 +1,20 @@
+// ==UserScript==
+// @name        Owa mail copy
+// @version     0.0.3
+// @description Add button for easy copy of e-mail address in OWA
+// @author      Ruslan Borovilov
+// @namespace   https://github.com/Pycz/
+// @homepageURL https://github.com/Pycz/owa-mail-copy
+// @match       *://*/owa/*
+// @match       https://outlook.live.com/mail/*
+// @match       https://outlook.office365.com/mail/*
+// @match       https://outlook.office.com/mail/*
+// @grant       none
+// @require     < REPLACE ME WITH file:// PATH TO owa_mail_copy.user.js !!! >
+// ==/UserScript==
+
+// Not realy working firefox edition
+// 1. Use Live Server VSCode extension
+// 2. http://127.0.0.1:5500/owa_mail_copy.user.js - script address if up with http server
+// 3. Put it into @require directive in this file. Example:
+//    @require    http://127.0.0.1:5500/owa_mail_copy.user.js
